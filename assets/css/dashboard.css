@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background: url('../img/hero-jharkhand.jpg');
+    opacity: -30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-family: Playfair Display, serif;
+
+}
+
+/* Stats Cards */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    background-color: rgba(178, 204, 178,0.3);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-family: Playfair Display, serif;
+}
+
+.stat-card p {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+    font-family: Playfair Display, serif;
+
+}
+
+/* Admin Button */
+.admin-btn {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.admin-btn:hover {
+    background-color: #d35400;
+}
+
+/* -----------------------------
+   Responsive Media Queries
+--------------------------------*/
+
+/* For tablets (width <= 768px) */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 80%;  /* cards take more width on tablet */
+    }
+}
+
+/* For mobile phones (width <= 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        width: 90%;  /* almost full width */
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .stat-card p {
+        font-size: 20px;
+    }
+
+    .admin-btn {
+        width: 90%;  /* button stretches */
+        padding: 12px 0;
+        font-size: 16px;
+    }
+}
