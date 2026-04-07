@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 /* HERO SECTION */
 .hero {
     padding-top: 90px;
@@ -25,8 +26,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
+    /* height: 100%; */
+    /* background: rgba(0,0,0,0.5); */
 }
 
 .hero-content {
@@ -66,7 +67,7 @@
 }
 
 .explore-btn:hover {
-    background: #e68900;
+    background: #0f9e2e;
 }
 @media (max-width: 768px) {
     .hero-content h1 {

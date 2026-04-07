@@ -1,16 +1,19 @@
+<?php
+session_start();
+?>
 <?php include('../backend/config/db.php'); ?>
 <?php include('../includes/header.php')?>
 
-<section class="destinations">
 
   <!-- Heading -->
-  <div class="heading">
+  <div class="header11">
     <h3>Explore</h3>
     <h1>Destinations</h1>
     <p>Discover the most beautiful places in Jharkhand</p>
   </div>
+<section class="destinations">
 
-<div class="cards"> 
+<div class="cards1">  
 
 <?php
 
@@ -40,7 +43,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   $image = !empty($row['image']) ? basename($row['image']) : "default.jpg";
 ?>
     
-  <div class="card">
+  <div class="card1">
     <img src="../admin/uploads/<?php echo $row['image']; ?>">
     <div class="card-content">
       <span class="location">📍 <?php echo $location; ?></span>

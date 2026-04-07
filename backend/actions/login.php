@@ -30,8 +30,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Set session variables
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role']; 
+
             // Redirect to home page
-            header("Location: home.php");
+            if ($user['role'] === 'admin') {
+                header("Location: http://localhost/project/admin/dashboard.php");
+            } else {
+                header("Location: http://localhost/project/index.php");
+            }
             exit();
         } else {
             $error = "Invalid password!";
@@ -51,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="http://localhost/project/assets/css/login.css">
 </head>
 <body>
     <div class="login-container">
@@ -59,7 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php if (!empty($error)) { echo "<p class='error-msg'>$error</p>"; } ?>
 
         <form class="login-form" action="" method="POST">
-            <h2>Login</h2>
+            <span class="boxx"><a href="/project/index.php"><img src="/project/assets/img/home.png" alt=""></a>
+            <h2>Login</h2></span>
             <div class="input-group">
                 <label for="username">Username or Email</label>
                 <input type="text" id="username" name="username" placeholder="Enter username or email" required>

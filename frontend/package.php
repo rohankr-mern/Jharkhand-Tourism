@@ -5,7 +5,7 @@ session_start();
 
 <!-- Header -->
   <section class="header1">
-    <h3>CURATED EXPERIENCES</h3>
+    <h3>Curated Experiences</h3>
     <h1>Tour Packages</h1>
     <p>Handcrafted tours for every kind of travellers</p>
   </section>
@@ -58,7 +58,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         <span><?php echo $destinations_count ?> destinations</span>
       </div>
 
-    <div class="destinations">
+    <div class="destinations1">
         <?php foreach($destinations as $d): ?>
           <span><?php echo htmlspecialchars(trim($d)) ?></span>
         <?php endforeach; ?>

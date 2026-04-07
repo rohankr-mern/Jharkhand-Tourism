@@ -8,7 +8,7 @@
       Book your perfect tour package and experience the untouched beauty of 
       nature, culture, and adventure.
     </p>
-    <button>Book Your Tour Now</button>
+    <a href="/project/frontend/package.php"><button>Book Your Tour Now</button></a>
   </div>
 
   <!-- Main Footer -->
@@ -24,9 +24,9 @@
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Tour Packages</a></li>
-        <li><a href="#">Shop</a></li>
+        <li><a href="../frontend/destination.php">Destinations</a></li>
+        <li><a href="../frontend/package.php">Tour Packages</a></li>
+        <li><a href="../frontend/shop.php">Shop</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
@@ -39,6 +39,6 @@
     </div>
   </div>
 </footer>
-<script src="script.js"></script>
+<script src="/project/assets/js/script.js"></script>
 </body>
 </html>

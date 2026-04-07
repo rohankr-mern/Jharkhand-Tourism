@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jharkhand Tourism - Sign Up</title>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="http://localhost/project/assets/css/signup.css">
 </head>
 <body>
     <div class="signup-container">
@@ -92,10 +92,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
             </div>
 
-            <button type="submit" class="signup-btn">Sign Up</button>
+            <button type="submit" class="signup-btn" href="login.php">Sign Up</button>
         </form>
 
-        <p class="login-link">Already have an account? <a href="login.php">Login</a></p>
+        <p class="login-link">Already have an account? <a href="../actions/login.php">Login</a></p>
     </div>
 </body>
 </html>

@@ -32,7 +32,7 @@
   font-size: 16px;
 }
 
-.footer-cta button {
+/* .footer-cta button {
   padding: 12px 25px;
   background: #ff9800;
   color: #FFF;
@@ -40,6 +40,17 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+} */
+ .footer-cta button {
+    padding: 14px 30px;
+    font-size: 16px;
+    background: linear-gradient(45deg, #ecc71e, #218838);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 250px;
 }
 
 .footer-cta button:hover {

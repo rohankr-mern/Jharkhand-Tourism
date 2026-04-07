@@ -25,12 +25,25 @@ body {
     width: 100%;
     max-width: 400px; /* max width for larger screens */
 }
-
+.boxx{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.boxx img{
+    height: 30px;
+    width: 30px;
+}
+.boxx h2{
+    font-size: 18px;
+    margin: 0;
+}
 /* Form heading */
 .login-form h2 {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     color: #333;
+    font-size: 17px;
 }
 
 /* Input groups */
