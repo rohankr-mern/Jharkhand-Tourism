@@ -16,9 +16,9 @@ window.addEventListener('scroll', function() {
     }
 });
 
-let cards = document.querySelectorAll('#cards-container .card.hidden');
-let loadMoreBtn = document.getElementById('.loadMore');
-let showCount = 3;
+// let cards = document.querySelectorAll('#cards-container .card.hidden');
+// let loadMoreBtn = document.getElementById('.loadMore');
+// let showCount = 3;
 
 // loadMoreBtn.addEventListener('click', () => {
 //     for(let i=0; i<showCount && cards.length>0; i++){
@@ -52,7 +52,7 @@ function addComment() {
   formData.append("comment", comment);
   formData.append("rating", rating);
 
-  fetch("add_comment.php", {
+  fetch("/project/frontend/add_comments.php", {
     method: "POST",
     body: formData
   })
@@ -89,5 +89,81 @@ function loadComments() {
 
 // 🔄 Auto load
 loadComments();
+// Open popup
+function openBooking(id) {
+  document.getElementById("bookingPopup").classList.add("active");
+  document.getElementById("package_id").value = id;
+}
+
+// Close popup
+function closeBooking() {
+  document.getElementById("bookingPopup").classList.remove("active");
+}
+
+// Close success
+function closeSuccess() {
+  document.getElementById("successPopup").classList.remove("active");
+}
+
+// Submit form
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("bookingForm1");
+
+  if (!form) {
+    console.warn("bookingForm not found");
+    return;
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let formData = new FormData(this);
+
+    fetch("../admin/save_booking.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+      if (data.trim() === "success") {
+        Swal.fire({
+          title: 'Success!',
+          text: 'Booking Successful!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        });
+
+        form.reset();
+
+        const popup = document.getElementById("bookingPopup");
+        if (popup) popup.classList.remove("active");
+
+      } else {
+        Swal.fire({
+          title: 'Error!',
+          text: 'Booking Failed. Try again!',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
+      }
+    })
+    .catch(err => {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Something went wrong.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+      console.error(err);
+    });
+  });
+});
+// Swal.fire({
+//   title: 'Success!',
+//   text: 'Booking Successful!',
+//   icon: 'success',
+//   confirmButtonText: 'OK'
+// });
+
 
 

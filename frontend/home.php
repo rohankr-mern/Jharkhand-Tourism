@@ -72,8 +72,9 @@ Land of lush forests, cascading waterfalls, and rich ancient tribal heritage—b
   <div class="comment">
     <h3>Leave a Comment</h3>
     <input type="text" id="name" placeholder="Your name">
-    <input type="text" placeholder="Write your comment">
-    <div class="rating">
+    <input type="text" id="commentText" placeholder="Write your comment">
+
+  <div class="rating">
   <input type="radio" name="rating" value="5" id="star5">
   <label for="star5">★</label>
 
@@ -97,18 +98,10 @@ Land of lush forests, cascading waterfalls, and rich ancient tribal heritage—b
 <div class="comment-slider" id="commentSlider"></div>
 
 <!-- sweetAlert CDN -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- show booking success -->
 <?php if(isset($_GET['status'])) { ?>
-<script>
-Swal.fire({
-  title: 'Success!',
-  text: 'Booking Successful!',
-  icon: 'success',
-  confirmButtonText: 'OK'
-});
-</script>
+
 <?php } ?>
 
 

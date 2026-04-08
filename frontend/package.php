@@ -3,6 +3,38 @@ session_start();
 ?>
 <?php include('../includes/header.php')?>
 
+<!-- 🔲 Booking Popup -->
+<div id="bookingPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeBooking()">&times;</span>
+
+    <h2>Book Package</h2>
+
+    <form id="bookingForm1">
+      <input type="hidden" name="package_id" id="package_id">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="phone" placeholder="Mobile Number" required>
+      <input type="date" name="date" required>
+      <input type="number" name="persons" placeholder="Persons" required>
+      <textarea name="message" placeholder="Special Request"></textarea>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<!-- ✅ Success Popup -->
+<!-- <div id="successPopup" class="success-popup">
+  <div class="success-content">
+    <h3>🎉 Booking Successful!</h3>
+    <button onclick="closeSuccess()">OK</button>
+  </div>
+</div> -->
+
+<!-- PACKAGE SECTION CODE -->
+
 <!-- Header -->
   <section class="header1">
     <h3>Curated Experiences</h3>
@@ -76,9 +108,9 @@ while ($row = mysqli_fetch_assoc($result)) {
       <div class="card-footer">
         <div class="price">₹<?php echo $price?></div>
         <?php if(isset($_SESSION['user_id'])) { ?>
-        <a href="book.php?id=<?php echo $row['id']; ?>" class="btn" href="book.php">Book Now</a>
+        <button class="btn3" onclick="openBooking(<?php echo $row['id']; ?>)">Book Now</button>
         <?php } else { ?>
-        <a href="login.php" class="btn">Login to Book</a>
+        <a href="/project/backend/actions/login.php" class="btn3">Login to Book</a>
         <?php } ?>
       </div>
     </div>

@@ -26,17 +26,17 @@
             border-radius: 5px;
         }
 
-        button {
+        .btn0 {
             width: 100%;
             padding: 12px;
             margin-top: 15px;
-            background: #e68900;
+            background: #ff9800;
             color: white;
             border: none;
             border-radius: 25px;
             cursor: pointer;
         }
 
-        button:hover {
-            background: darkgreen;
+        .btn0:hover {
+            background: #e68900;
         }

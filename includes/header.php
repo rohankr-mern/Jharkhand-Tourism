@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="/project/assets/css/index.css">
     <link rel="stylesheet" href="/project/assets/css/shop.css">
     <link rel="stylesheet" href="/project/assets/css/destination.css">
+    <!-- <link rel="stylesheet" href="/project/assets/css/book.css"> -->
     <link rel="stylesheet" href="/project/assets/css/package.css">
     <link rel="stylesheet" href="/project/assets/css/gallery.css">
     <link rel="stylesheet" href="/project/assets/css/footer.css">
     <link rel="stylesheet" href="/project/assets/css/cart_page.css">
     <link rel="stylesheet" href="/project/assets/css/checkout.css">
     <link rel="stylesheet" href="/project/assets/css/home.css">
-
 
 
 </head>
