@@ -36,6 +36,9 @@
             <a href="/project/frontend/cart_page.php">
                <i class="fas fa-shopping-cart cart-icon"></i>
            </a>
+           <a href="/project/backend/actions/login.php" class="admin-icon">
+            <i class="fa-solid fa-user-tie"></i>
+           </a>
           <?php if(isset($_SESSION['user_id'])): ?>
                 <!-- Show profile icon and username if logged in -->
                 <div class="profile">

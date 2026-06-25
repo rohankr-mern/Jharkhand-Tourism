@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="signup-container">
+        
         <h1>Sign Up</h1>
 
         <!-- Display success or error messages -->

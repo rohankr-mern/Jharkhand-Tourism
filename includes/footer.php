@@ -39,7 +39,7 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/project/assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

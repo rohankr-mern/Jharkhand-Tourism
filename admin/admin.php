@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="./admin.css">
 </head>
 <body>
-<h1>Admin Panel</h1>
+<span class="boxx"><a href="/project/index.php"><img src="/project/assets/img/home.png" alt=""></a>
+<h1>Admin Panel</h1></span>
 
 <div class="tabs">
   <button onclick="showSection('destinations')">Destinations</button>

@@ -71,6 +71,19 @@ header {
     color: #ff9800;
 }
 
+
+/* ADMIN ICON */
+.admin-icon {
+ font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.admin-icon:hover {
+    color: #ff9800;
+}
 /* ===== LOGIN BUTTON ===== */
 .login-btn {
     font-size: 15px;

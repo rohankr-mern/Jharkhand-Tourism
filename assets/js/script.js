@@ -39,13 +39,14 @@ function openPopup() {
       document.getElementById("signupPopup").style.display = "none";
     }
 
-// OMMENT LOGIC
+// COMMENT LOGIC
 
 // ➕ Add Comment
 function addComment() {
   let name = document.getElementById("name").value;
   let comment = document.getElementById("commentText").value;
-  let rating = document.getElementById("rating").value;
+  let ratingInput = document.querySelector('input[name="rating"]:checked');
+  let rating = ratingInput ? ratingInput.value : null;
 
   let formData = new FormData();
   formData.append("name", name);
@@ -66,7 +67,7 @@ function addComment() {
 
 // 📥 Load Comments
 function loadComments() {
-  fetch("./frontend/get_comments.php")
+  fetch("/project/frontend/get_comments.php")
   .then(res => res.json())
   .then(data => {
     let slider = document.getElementById("commentSlider");
@@ -77,7 +78,7 @@ function loadComments() {
 
       slider.innerHTML += `
         <div class="comment-card">
-          <img src="https://i.pravatar.cc/40">
+          <img src="/project/assets/img/user.png">
           <h4>${c.name}</h4>
           <div class="stars">${stars}</div>
           <p>${c.comment}</p>

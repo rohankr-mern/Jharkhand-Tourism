@@ -1,5 +1,12 @@
 <?php
-session_start(); // Start session at the top
+session_start();
+
+if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin') {
+    header("Location: /project/admin/dashboard.php");
+    exit();
+}
+
+
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -56,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Jharkhand-Tourism/Login Page</title>
     <link rel="stylesheet" href="http://localhost/project/assets/css/login.css">
 </head>
 <body>
